@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/login.js"></script>
+    <title>SIGN IN</title>
+</head>
+<body>
+    <div class="menu">
+        <nav>
+            <div id="header-box"></div>
+            <li><a href="../index.html" class="item">HOME</a></li>
+            <li><a href="about.html" class="item">ABOUT</a></li>
+            <li><a href="favorite.html" class="item">FAVORITE</a></li>
+            <li><a href="roadmap.html" class="item">ROADMAP</a></li>
+            <li><a href="signin.html" class="item">SIGN IN</a></li>
+        </nav>
+    </div>
+    <div class="content">
+      <div class="login">
+        <hr>
+        <div id="choice">
+          <h3>Registered Members</h3>
+          <!-- <img src="./images/starts.png" alt="" id="stars"> -->
+          <p id="foo">sign in or register for an account</p>
+        </div>
+        <br>
+        <div id="inputs">
+            <input type="text" name="id" id="in-id" placeholder="아이디 입력"><br>
+            <input type="password" name="pwd" id="in-pwd" placeholder="비밀번호 입력"><br>
+            <br>
+            <input type="button" value="로그인" id="loginBtn"><br>
+            <input type="button" value="회원가입" id="signupBtn" onclick="window.location.href='./signup.html'">
+            <p id="back"><a href="./index.html">홈으로 돌아가기</a></p>
+            <br><br>
+        </div>
+        <hr>
+    </div>
+  </div>
+</body>
+</html>

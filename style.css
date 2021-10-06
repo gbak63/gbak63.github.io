@@ -1,0 +1,415 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@800&family=Nanum+Myeongjo:wght@700;800&family=Roboto+Condensed:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: rgb(214, 221, 192);
+    margin-top: 50px;
+    text-align: center;
+    /* height: 91vh; */
+}
+
+/* 메뉴 css */
+.menu {
+    font-family: 'Kaisei Tokumin', serif;
+    width: 700px;
+    margin: 0 auto;
+    left: 15px;
+    right: 0;
+    top: 65px;
+    position: fixed;
+}
+.item {
+    position: relative;
+    transition: .3s;
+    text-decoration: none;
+}
+.item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 102%;
+    height: 5px;
+    opacity: 0;
+    background-color: rgb(78, 104, 78, 0.6);
+    border-radius: 10px 10px;
+    transition: .2s;
+}
+.item:hover:before {
+    bottom: 5;
+    opacity: 1;
+}
+.menu li {
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+.menu li a {
+    text-decoration: none;
+    color: rgb(56, 55, 55);
+    margin: auto;
+    position: relative;
+    transition: .3s;
+}
+.active {
+  font-weight: bold;
+}
+
+/* Content css */
+.content {
+    align-items: center;
+    padding-top: 80px;
+}
+.content #me >img {
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+    margin-top: 50px;
+    border: 10px solid rgb(0, 0, 0, 0.3);
+}
+.content #me >p {
+    font-size: 26px;
+    font-family: 'Kaisei Tokumin', serif;
+    color: rgb(55, 73, 55);
+    text-shadow: 2px 2px #e6e6e6;
+    margin-bottom: 0;
+}
+.content ol {
+    padding: 0;
+}
+.content ol>li>a>img{
+    width: 30px;
+    height: 30px;
+}
+.content ol>li {
+    list-style: none;
+    display: inline-flex;
+    margin: 10px;
+}
+#icons p {
+    padding-top: 15px;
+    font-size: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(56, 55, 55);
+}
+
+/* ABOUT 메뉴 CSS */
+.aboutme_info {
+  display: inline-flex;
+}
+.photo {
+    background-color: #efefef;
+    width: 360px;
+    height: 430px;
+    padding-top: 20px;
+    box-shadow: 8px 8px 5px gray;
+    border-radius: 7px;
+    margin: 30px 0 0 120px;
+}
+#aboutme {
+    width: 335px;
+    height: 335px;
+    margin: 0;
+    padding: 0;
+}
+#writing {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 35px;
+  margin-top: 18px;
+  padding-left: 30px;
+  text-align: left;
+}
+.introduce {
+  font-family: 'Pretendard-Regular';
+  text-align: left;
+  margin: 30px 0 0 30px;
+  align-items: center;
+  line-height: 32px;
+  width: 600px;
+}
+mark {
+  background-color: rgb(162, 185, 162);
+}
+mark:hover {
+  color: white;
+  cursor: pointer;
+}
+#click_me {
+  padding-left: 230px;
+}
+#arrow {
+  width: 30px;
+  height: 30px;
+  transform: translate(15px,20px);
+  margin-right: 28px;
+}
+#click_me>span {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  animation: bounce .5s ease infinite alternate;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  color: rgb(248, 183, 2);
+  text-shadow: 0 2px 0 #fff,
+               0 2px 0 #fff,
+               0 2px 0 #fff,
+               0 2px 0 #fff,
+               0 2px 0 #fff,
+               0 10px 10px rgba(0, 0, 0, .1);
+}
+
+#click_me>span:nth-child(2) { animation-delay: .4s; }
+#click_me>span:nth-child(3) { animation-delay: .5s; }
+#click_me>span:nth-child(4) { animation-delay: .6s; }
+#click_me>span:nth-child(5) { animation-delay: .7s; }
+#click_me>span:nth-child(6) { animation-delay: .8s; }
+
+@keyframes bounce {
+  100% {
+    top: -10px;
+  }
+}
+
+/*FAVORITE 메뉴 CSS*/
+ul, dl, dd {
+  margin:0;
+  padding:0;
+  font-family: 'Pretendard-Regular';
+}
+section {
+  width: 1000px;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.slider {
+  list-style:none;
+  height:500px;
+  overflow:hidden;
+}
+.slider:after {
+  content:'';
+  display:block;
+  clear:both;
+}
+.slider li {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:50px;
+  opacity:0;
+}
+.slider li div {
+  width:800px;
+  height:450px;
+  background-size: cover;
+  position:relative;
+  margin: 150px auto;
+  text-align: center;
+}
+.slider li dl {
+  position:absolute;
+  top:50%;
+  transform:translateY(-30%);
+  left:20px;
+}
+.slider li .right {
+  left:auto;
+  right:20px;
+  text-align:right;
+} 
+.slider li .left {
+  right: auto;
+  left: 20px;
+  text-align: left;
+}
+.slider li dt {
+  color:#fff;
+  font-size:2.5rem;
+  text-shadow:1px 1px 10px #444;
+}
+.slider li dd {
+  color:#fff;
+  text-shadow:1px 1px 10px #444;
+  font-style:italic;
+}
+.btn {
+  margin: 0;
+  padding: 0;
+}
+.btn button {
+  margin-top:10px;
+  border: none;
+  background-color:rgb(214, 221, 192);
+  color:#666;
+  font-size:1.5rem;
+  cursor:pointer;
+  width: 50px;
+  height: 50px;
+}
+.btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/*ROADMAP 메뉴 CSS*/
+.roadmap-box {
+  width: 1000px;
+  height: 500px;
+  margin: 40px auto;
+  background-color: #efefef;
+  border-radius: 7px;
+  text-align: left;
+  font-family: 'Pretendard-Regular';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.contentBox {
+  margin-top : 25px;
+  display: flex;
+  flex-direction: column;
+}
+.contentInnerBox {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
+}
+.box_info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 700px;
+  opacity: .3;
+}
+
+.box_info:hover {
+  opacity: 1;
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+      opacity: .5;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.contentInnerBox>img {
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+}
+#js-img {
+  transform: translateX(-8px);
+}
+.box_title {
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration-line: underline;
+}
+
+
+/*SIGN IN 메뉴 CSS*/
+.login {
+  width: 600px;
+  height: 380px;
+  margin: 80px auto;
+  text-align: center;
+  /* font-family: 'Kaisei Tokumin', serif; */
+}
+#choice {
+  margin: 50px 0 5px 40px;
+  font-family: 'Kaisei Tokumin', serif;
+  color: rgb(56, 55, 55);
+}
+h3 {
+  margin: 0;
+  font-family: 'Kaisei Tokumin', serif;
+  color: rgb(56, 55, 55);
+}
+.login #foo {
+  font-size: 13px;
+  margin-top: 5px;
+  color: rgb(56, 55, 55);
+}
+#inputs {
+  padding-left: 30px;
+  font-family: 'Pretendard-Regular';
+}
+
+form {
+  margin-top: 60px;
+}
+input[type=text]{
+  width: 300px;
+  height: 30px;
+  margin: 4px;
+  padding-left: 5px;
+  border: 1px solid lightgray;
+}
+input[type=password]{
+  width: 300px;
+  height: 30px;
+  margin: 4px;
+  padding-left: 5px;
+  border: 1px solid lightgray;
+}
+input[type=number] {
+  width: 300px;
+  height: 30px;
+  margin: 4px;
+  padding-left: 5px;
+  border: 1px solid lightgray;
+}
+input[type=date] {
+  width: 175px;
+  height: 30px;
+  /* margin: 25px; */
+  padding-left: 5px;
+  border: 1px solid lightgray;
+}
+#loginBtn{
+  background-color: rgb(78, 104, 78, 0.6);
+  color: #fff;
+  border: none;
+  width: 300px;
+  height: 30px;
+  margin: 4px;
+  cursor: pointer;
+}
+#signup, #signupBtn{
+  background-color: rgba(33, 44, 33, 0.6);
+  color: #fff;
+  width: 300px;
+  height: 30px;
+  margin: 4px;
+  border: none;
+  cursor:pointer;
+}
+#back a{
+  font-size: 10px;
+  text-decoration: underline;
+  color: rgb(56, 55, 55);
+}
+#bday {
+  margin: 20px 3px 0 0;
+  padding: 0;
+}
